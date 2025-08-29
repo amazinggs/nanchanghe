@@ -1,0 +1,121 @@
+body{
+    padding-bottom: 80px;
+}
+.my_sticky_addtocart {
+	position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transform: translateY(100%);
+    transition: transform 300ms ease;
+    will-change: transform;
+    z-index: 50;
+	background-color: #000000;
+	color: #ffffff;
+}
+.my_sticky_addtocart.is-visible {
+    transform: translateY(0);
+}
+.my_sticky_addtocart_container{
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 15px;
+    max-width: 1280px;
+}
+.my_sticky_addtocart_flex{
+    display: flex;
+    justify-content: space-between;
+}
+.my_sticky_addtocart_flex_leftblock {
+    display: flex;
+    gap: 15px;
+	padding-right:8px
+}
+.my_sticky_addtocart_flex_rightblock {
+	display:flex;
+	width:100%;
+	flex-shrink:0;
+	align-items:center;
+    width:auto;
+}
+.my_sticky_addtocart_image {
+	width: 60px;
+	/* flex:1 0 auto; */
+	cursor: pointer;
+}
+.my_sticky_addtocart_image img{
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+}
+.my_sticky_addtocart_title {
+    margin: auto 0;
+}
+.my_sticky_addtocart_title h3 {
+    margin: 0;
+    color: #ffffff;
+	font-weight:500;
+	cursor:pointer;
+	overflow:hidden;
+	display:-webkit-box;
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:1
+}
+.my_sticky_addtocart_title .m-price {
+	font-size:15px
+}
+.my_sticky_addtocart_form{
+    display: flex;
+}
+.my_sticky_addtocart_price{
+    margin: auto;
+    margin-right: 25px;
+}
+.my_sticky_addtocart_price .price{
+    color: #fff;
+    font-size: 18px;
+    line-height: 1.2;
+    font-weight: bold;
+}
+.my_sticky_addtocart_form_button .product-form__submit{
+    padding: 10px 30px;
+    line-height: 1.2;
+    height: fit-content;
+    background: #fff;
+    color: #000;
+    font-size: 16px;
+    margin: 0;
+    min-width: unset;
+    min-height: unset;
+}
+@media screen and (max-width:767px) {
+    body{
+        padding-bottom: 100px;
+    }
+    .my_sticky_addtocart_flex_leftblock{
+        margin-bottom: 5px;
+    }
+	.my_sticky_addtocart_flex{
+        display: block;
+    }
+    .my_sticky_addtocart_image{
+        width: 40px;
+    }
+    .my_sticky_addtocart_title h3{
+        font-size: 14px;
+    }
+    .my_sticky_addtocart_flex_rightblock{
+        flex-direction: row-reverse;
+    }
+    .my_sticky_addtocart_price{
+        margin: auto 20px auto auto;
+    }
+    .my_sticky_addtocart_price .price{
+        font-size: 14px;
+    }
+    .my_sticky_addtocart_form_button .product-form__submit{
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
